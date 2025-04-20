@@ -9,6 +9,13 @@ type Stack[t any] struct {
 	objs []t
 }
 
+// Конструктор
+func NewStack[t any](arr []t) *Stack[t] {
+	return &Stack[t]{
+		objs: arr,
+	}
+}
+
 // Метод Push для вставки элементов
 func (s *Stack[t]) Push(obj t) {
 	s.objs = append(s.objs, obj)
